@@ -111,11 +111,12 @@ function area(l1, l2){
     }
 }
 
-let a = area(parseInt(prompt("Inserisci lato 1")), parseInt(prompt("Inserisci lato 2")))
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
+
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
