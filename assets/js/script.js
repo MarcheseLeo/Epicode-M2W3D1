@@ -75,7 +75,7 @@ function upperFirst(string){
                 }
             }
         });
-        return nuovaStringa
+        return nuovaStringa.trim() 
     }
 }
 /* ESERCIZIO 5
@@ -117,8 +117,18 @@ function area(l1, l2){
 */
 
 
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(n){
+    const d = 19
+    let diff = 0
+    if(!n){
+        alert("Devi inserire un numero valido")
+    }else{
+        diff = Math.abs(n-d)
+        if(diff>d) return diff*3
+        else return diff
+    }
+}
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
@@ -126,6 +136,18 @@ function area(l1, l2){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function codify(string){
+    const code = 'code'
+    let stringLower =  string.toLowerCase()
+    if(!string){
+        alert("Inserisci una stringa valida")
+    }else if(stringLower.startsWith(code)){
+        return string
+    }else {
+        return code.concat(" ", string)
+    }
+}
+
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -135,8 +157,33 @@ function area(l1, l2){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function check3and7(n){
+    if(!n){
+        alert("Devi inserire un numero valido")
+    }else if(n<=0){
+        alert("Devi nserire un numero positivo")
+    }else {
+        if(n%3===0 || n%7===0){
+            return true
+        }else{
+            return false
+        }
+    }
+}
+
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(string){
+    if(!string){
+        alert("Inserisci una stringa valida")
+    }else if(string.length<=2){
+        alert("Inserisci una stringa di almeno 3 caratteri")
+    }else {
+        let newString = string.slice(1, string.length-1)
+        return newString
+    }
+}
+
