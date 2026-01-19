@@ -43,10 +43,7 @@ function reverseString(string){
     if(!string || string.length === 1 ){
         alert("Devi inserire una stringa valida")
     }else {
-        let nuovaStringa = ""
-        for(let i = string.length-1; i>=0; i--){
-            nuovaStringa += string[i]
-        }
+        let nuovaStringa = string.split("").reverse().join("")
        return nuovaStringa
     }
    
@@ -186,4 +183,3 @@ function cutString(string){
         return newString
     }
 }
-
