@@ -61,20 +61,23 @@ function upperFirst(string){
         console.log(arr)
         let nuovaStringa = ""
         arr.forEach(element => {
-            for(let i = 0; i < element.length; i ++){
-                if(i==0){
-                    nuovaStringa += element[i].toUpperCase()
-                }
-                else if(i==element.length-1){
-                    nuovaStringa += element[i].toLowerCase() + " "
-                }else {
-                    nuovaStringa += element[i].toLowerCase() 
-                }
-            }
+            // for(let i = 0; i < element.length; i ++){
+            //     if(i==0){
+            //         nuovaStringa += element[i].toUpperCase()
+            //     }
+            //     else if(i==element.length-1){
+            //         nuovaStringa += element[i].toLowerCase() + " "
+            //     }else {
+            //         nuovaStringa += element[i].toLowerCase() 
+            //     }
+            // }
+            let toLower = element.toLowerCase()
+            nuovaStringa +=  toLower.replace(toLower.charAt(0), toLower.charAt(0).toUpperCase()) + " "
         });
         return nuovaStringa.trim() 
     }
 }
+
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
@@ -183,3 +186,4 @@ function cutString(string){
         return newString
     }
 }
+
